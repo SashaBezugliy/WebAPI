@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplyFindWebAPI", "SimplyFindWebAPI\SimplyFindWebAPI.csproj", "{06E030BC-9853-4F2E-942D-A2982ACD74CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "C:\Users\Дом\Documents\Visual Studio 2012\Projects\SimplyFind_OLD\DataAccess\DataAccess.csproj", "{D7241608-D175-4F3D-9BA7-985C0685907E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{D7241608-D175-4F3D-9BA7-985C0685907E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

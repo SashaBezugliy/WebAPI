@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SimplyFindModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SimplyFindEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="ProductLocation" EntityType="SimplyFindModel.ProductLocation" />
+  </EntityContainer>
+  <EntityType Name="ProductLocation">
+    <Key>
+      <PropertyRef Name="ProductLocationId" />
+    </Key>
+    <Property Type="Int32" Name="ProductLocationId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ProductId" Nullable="false" />
+    <Property Type="String" Name="ProductName" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Type="Decimal" Name="Latitude" Precision="16" Scale="14" Nullable="false" />
+    <Property Type="Decimal" Name="Longitude" Precision="16" Scale="14" Nullable="false" />
+    <Property Type="Int32" Name="SupermarketId" Nullable="false" />
+  </EntityType>
+</Schema>

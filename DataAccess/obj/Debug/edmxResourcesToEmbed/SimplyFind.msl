@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SimplyFindModelStoreContainer" CdmEntityContainer="SimplyFindEntities">
+    <EntitySetMapping Name="ProductLocation">
+      <EntityTypeMapping TypeName="SimplyFindModel.ProductLocation">
+        <MappingFragment StoreEntitySet="ProductLocation">
+          <ScalarProperty Name="SupermarketId" ColumnName="SupermarketId" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductLocationId" ColumnName="ProductLocationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
