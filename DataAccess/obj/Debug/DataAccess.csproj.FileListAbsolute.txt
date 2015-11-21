@@ -4,3 +4,10 @@ D:\Projects\SimplyFindWebAPI\DataAccess\bin\Debug\EntityFramework.dll
 D:\Projects\SimplyFindWebAPI\DataAccess\bin\Debug\EntityFramework.xml
 D:\Projects\SimplyFindWebAPI\DataAccess\obj\Debug\DataAccess.dll
 D:\Projects\SimplyFindWebAPI\DataAccess\obj\Debug\DataAccess.pdb
+D:\myApp\SimplyFindWebAPI\DataAccess\bin\Debug\DataAccess.dll
+D:\myApp\SimplyFindWebAPI\DataAccess\bin\Debug\DataAccess.pdb
+D:\myApp\SimplyFindWebAPI\DataAccess\bin\Debug\EntityFramework.dll
+D:\myApp\SimplyFindWebAPI\DataAccess\bin\Debug\EntityFramework.xml
+D:\myApp\SimplyFindWebAPI\DataAccess\obj\Debug\DataAccess.dll
+D:\myApp\SimplyFindWebAPI\DataAccess\obj\Debug\DataAccess.pdb
+D:\myApp\SimplyFindWebAPI\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
