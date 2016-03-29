@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplyFindWebAPI", "SimplyFindWebAPI\SimplyFindWebAPI.csproj", "{06E030BC-9853-4F2E-942D-A2982ACD74CC}"
-EndProject
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{D7241608-D175-4F3D-9BA7-985C0685907E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SF.API", "SF.API\SF.API.csproj", "{C8CC7AB0-C21D-401E-AA24-3531743F7ABB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{06E030BC-9853-4F2E-942D-A2982ACD74CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06E030BC-9853-4F2E-942D-A2982ACD74CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06E030BC-9853-4F2E-942D-A2982ACD74CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06E030BC-9853-4F2E-942D-A2982ACD74CC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D7241608-D175-4F3D-9BA7-985C0685907E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D7241608-D175-4F3D-9BA7-985C0685907E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7241608-D175-4F3D-9BA7-985C0685907E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7241608-D175-4F3D-9BA7-985C0685907E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8CC7AB0-C21D-401E-AA24-3531743F7ABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8CC7AB0-C21D-401E-AA24-3531743F7ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8CC7AB0-C21D-401E-AA24-3531743F7ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8CC7AB0-C21D-401E-AA24-3531743F7ABB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

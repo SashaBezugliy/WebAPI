@@ -86,3 +86,7 @@ D:\myApp\SimplyFindWebAPI\SimplyFindWebAPI\bin\System.Web.WebPages.Razor.xml
 D:\myApp\SimplyFindWebAPI\SimplyFindWebAPI\obj\Debug\SimplyFindWebAPI.csprojResolveAssemblyReference.cache
 D:\myApp\SimplyFindWebAPI\SimplyFindWebAPI\obj\Debug\SimplyFindWebAPI.dll
 D:\myApp\SimplyFindWebAPI\SimplyFindWebAPI\obj\Debug\SimplyFindWebAPI.pdb
+D:\Projects\SimplyFindWebAPI\SimplyFindWebAPI\bin\SimplyFindWebAPI.dll.config
+D:\Projects\SimplyFindWebAPI\SimplyFindWebAPI\bin\System.Web.Cors.dll
+D:\Projects\SimplyFindWebAPI\SimplyFindWebAPI\bin\System.Web.Http.Cors.dll
+D:\Projects\SimplyFindWebAPI\SimplyFindWebAPI\bin\System.Web.Http.Cors.xml
