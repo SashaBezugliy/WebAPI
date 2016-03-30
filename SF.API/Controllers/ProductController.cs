@@ -9,7 +9,6 @@ namespace SF.API.Controllers
         private ProductLocationDAL _dal = new ProductLocationDAL();
 
         // GET api/product/5
-        //[EnableCors(origins: "*", headers: "*", methods: "*")]
         public string Get(int id)
         {
             return JsonConvert.SerializeObject(_dal.GetProductLocations(id));
