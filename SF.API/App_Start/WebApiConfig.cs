@@ -19,6 +19,11 @@ namespace SF.API
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.Routes.MapHttpRoute(
+                name: "product-lists",
+                routeTemplate: "productlists/{userId}",
+                defaults: new { controller = "Product", action = "GetProductLists"}
+            );
         }
     }
 }

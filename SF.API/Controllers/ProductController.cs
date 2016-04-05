@@ -1,4 +1,6 @@
-﻿using System.Web.Http;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Web.Http;
 using DataAccess.DAL;
 using Newtonsoft.Json;
 
@@ -12,6 +14,13 @@ namespace SF.API.Controllers
         public string Get(int id)
         {
             return JsonConvert.SerializeObject(_dal.GetProductLocations(id));
+        }
+
+        public string GetProductLists(string userId)
+        {
+            return
+                JsonConvert.SerializeObject(
+                    _dal.GetProductLists(userId).Select(i => new {ListName = i.Key, Products = i.Value}));
         }
 
         // POST api/values
