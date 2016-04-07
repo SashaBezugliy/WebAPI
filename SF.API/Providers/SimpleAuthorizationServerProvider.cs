@@ -11,16 +11,16 @@ namespace SF.API.Providers
         {
             context.Validated();
         }
+        
 
-        //[EnableCors(origins: "*", headers: "*", methods: "*")]
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
 
             //context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
-
-            using (AuthRepository _repo = new AuthRepository())
+            IdentityUser user;
+            using (var _repo = new AuthRepository())
             {
-                IdentityUser user = await _repo.FindUser(context.UserName, context.Password);
+                user = await _repo.FindUser(context.UserName, context.Password);
 
                 if (user == null)
                 {
@@ -31,7 +31,7 @@ namespace SF.API.Providers
 
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
             identity.AddClaim(new Claim("sub", context.UserName));
-            identity.AddClaim(new Claim("role", "user"));
+            identity.AddClaim(new Claim("userId", user.Id));
 
             context.Validated(identity);
 

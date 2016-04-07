@@ -3,6 +3,7 @@ using System.Linq;
 using System.Web.Http;
 using DataAccess.DAL;
 using Newtonsoft.Json;
+using SF.API.Infrastructure;
 
 namespace SF.API.Controllers
 {
@@ -16,6 +17,8 @@ namespace SF.API.Controllers
             return JsonConvert.SerializeObject(_dal.GetProductLocations(id));
         }
 
+        [CustomAuthorize]
+        //[ClaimsAuthorization(ClaimType = "FTE", ClaimValue = "2")]
         public string GetProductLists(string userId)
         {
             return

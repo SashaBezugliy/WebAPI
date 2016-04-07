@@ -14,4 +14,3 @@ D:\myApp\SimplyFindWebAPI\DataAccess\obj\Debug\DataAccess.pdb
 D:\Projects\SimplyFindWebAPI\DataAccess\bin\Debug\DataAccess.dll.config
 D:\Projects\SimplyFindWebAPI\DataAccess\bin\Debug\Newtonsoft.Json.dll
 D:\Projects\SimplyFindWebAPI\DataAccess\bin\Debug\Newtonsoft.Json.xml
-D:\Projects\SimplyFindWebAPI\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
