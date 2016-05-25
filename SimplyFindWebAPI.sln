@@ -7,6 +7,27 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SF.API", "SF.API\SF.API.csproj", "{C8CC7AB0-C21D-401E-AA24-3531743F7ABB}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SimplyFind(2)", "http://localhost:61392", "{028B5481-1D06-48B9-8612-FB1A804267B1}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61392"
+		Debug.AspNetCompiler.PhysicalPath = "..\SimplyFind\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61392\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61392"
+		Release.AspNetCompiler.PhysicalPath = "..\SimplyFind\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61392\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\SimplyFind\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +42,10 @@ Global
 		{C8CC7AB0-C21D-401E-AA24-3531743F7ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8CC7AB0-C21D-401E-AA24-3531743F7ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8CC7AB0-C21D-401E-AA24-3531743F7ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{028B5481-1D06-48B9-8612-FB1A804267B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{028B5481-1D06-48B9-8612-FB1A804267B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{028B5481-1D06-48B9-8612-FB1A804267B1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{028B5481-1D06-48B9-8612-FB1A804267B1}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

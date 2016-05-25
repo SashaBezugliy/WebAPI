@@ -4,8 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="01725297f328466e8a722ef1d219e84b" Name="Diagram1" >
-        <EntityTypeShape EntityType="SimplyFindModel.ProductLocation" Width="1.5" PointX="6.75155382359007" PointY="22.929445903249757" />
+      <Diagram DiagramId="01725297f328466e8a722ef1d219e84b" Name="Diagram1" ZoomLevel="124" >
+        <EntityTypeShape EntityType="SimplyFindModel.ProductList" Width="1.5" PointX="0.75" PointY="0.875" />
+        <EntityTypeShape EntityType="SimplyFindModel.ProductLocation" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SimplyFindModel.UserToList" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="SimplyFindModel.FK__UserToLis__ListI__7E37BEF6" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

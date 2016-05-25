@@ -20,42 +20,53 @@ namespace DataAccess.DAL
         {
             using (var sf = new SimplyFindEntities())
             {
-                return new Dictionary<string, List<ProductLocation>>()
+
+                var lists = sf.ProductList.Where(pl => pl.UserToList.Any(utl => utl.UserId == userId)).ToList();
+                var productLists = new Dictionary<string, List<ProductLocation>>();
+
+                foreach (var list in lists)
                 {
+                    var productIds = new List<long>();
+                    list.ProductIds.Split(',').ToList().ForEach(i => productIds.Add(Convert.ToInt64(i)));
+
+                    var productLocations = sf.ProductLocation.Where(pl => productIds.Contains(pl.ProductId)).ToList();
+                    productLists[list.ListName] = productLocations;
+                }
+
+                return productLists;
+            }
+        }
+
+
+        public void SaveProductList(string userId, string listName, List<long> productIds)
+        {
+            using (var sf = new SimplyFindEntities())
+            {
+                var productList = new ProductList {ListId = 1, ListName = listName, ProductIds = string.Join(",", productIds.ToArray()) };
+                sf.UserToList.Add(new UserToList {UserId = userId, ProductList = productList});
+                sf.ProductList.Add(productList);
+
+                try
+                {
+                    sf.SaveChanges();
+                }
+                catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+                {
+                    Exception raise = dbEx;
+                    foreach (var validationErrors in dbEx.EntityValidationErrors)
                     {
-                        "List One",
-                        new List<ProductLocation>
+                        foreach (var validationError in validationErrors.ValidationErrors)
                         {
-                            new ProductLocation
-                            {
-                                ProductId = 1,
-                                ProductName = "P1",
-                                Latitude = new decimal(49.77346700001596),
-                                Longitude = new decimal(24.00780541000000)
-                            },
-                            new ProductLocation
-                            {
-                                ProductId = 2,
-                                ProductName = "P2",
-                                Latitude = new decimal(49.77346711001596),
-                                Longitude = new decimal(24.00780544000000)
-                            }
-                        }
-                    },
-                    {
-                        "List Two",
-                        new List<ProductLocation>
-                        {
-                            new ProductLocation
-                            {
-                                ProductId = 3,
-                                ProductName = "P3",
-                                Latitude = new decimal(49.77326700001596),
-                                Longitude = new decimal(24.00780541000000)
-                            }
+                            string message = string.Format("{0}:{1}",
+                                validationErrors.Entry.Entity.ToString(),
+                                validationError.ErrorMessage);
+                            // raise a new exception nesting
+                            // the current instance as InnerException
+                            raise = new InvalidOperationException(message, raise);
                         }
                     }
-                };
+                    throw raise;
+                }
             }
         }
     }

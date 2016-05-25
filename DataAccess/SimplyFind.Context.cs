@@ -25,6 +25,8 @@ namespace DataAccess
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<ProductList> ProductList { get; set; }
         public DbSet<ProductLocation> ProductLocation { get; set; }
+        public DbSet<UserToList> UserToList { get; set; }
     }
 }

@@ -20,6 +20,7 @@ namespace SF.API
             
             WebApiConfig.Register(config);
             app.UseWebApi(config);
+            
         }
 
         public void ConfigureOAuth(IAppBuilder app)

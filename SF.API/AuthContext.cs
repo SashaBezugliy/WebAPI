@@ -7,7 +7,7 @@ namespace SF.API
         public AuthContext()
             : base("SimplyFindUsers")
         {
-
+            
         }
     }
 }

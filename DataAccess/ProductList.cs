@@ -12,12 +12,17 @@ namespace DataAccess
     using System;
     using System.Collections.Generic;
     
-    public partial class ProductLocation
+    public partial class ProductList
     {
-        public int ProductId { get; set; }
-        public string ProductName { get; set; }
-        public decimal Latitude { get; set; }
-        public decimal Longitude { get; set; }
-        public int SupermarketId { get; set; }
+        public ProductList()
+        {
+            this.UserToList = new HashSet<UserToList>();
+        }
+    
+        public int ListId { get; set; }
+        public string ListName { get; set; }
+        public string ProductIds { get; set; }
+    
+        public virtual ICollection<UserToList> UserToList { get; set; }
     }
 }

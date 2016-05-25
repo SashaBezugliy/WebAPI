@@ -2,8 +2,10 @@
 using System.Linq;
 using System.Web.Http;
 using DataAccess.DAL;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Newtonsoft.Json;
-using SF.API.Infrastructure;
+using SF.API.Models;
 
 namespace SF.API.Controllers
 {
@@ -16,14 +18,21 @@ namespace SF.API.Controllers
         {
             return JsonConvert.SerializeObject(_dal.GetProductLocations(id));
         }
-
+        
         [CustomAuthorize]
-        //[ClaimsAuthorization(ClaimType = "FTE", ClaimValue = "2")]
         public string GetProductLists(string userId)
         {
             return
                 JsonConvert.SerializeObject(
                     _dal.GetProductLists(userId).Select(i => new {ListName = i.Key, Products = i.Value}));
+        }
+
+        [HttpPost]
+        [CustomAuthorize]
+        [Route("savelist/{userId}")]
+        public void SaveProductList(ProductListModel model)
+        {
+            _dal.SaveProductList(model.UserId, model.ListName, model.ProductIds);
         }
 
         // POST api/values

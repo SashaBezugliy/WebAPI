@@ -53,6 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\ProductLocationDAL.cs" />
+    <Compile Include="ProductList.cs">
+      <DependentUpon>SimplyFind.tt</DependentUpon>
+    </Compile>
     <Compile Include="ProductLocation.cs">
       <DependentUpon>SimplyFind.tt</DependentUpon>
     </Compile>
@@ -71,6 +74,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SimplyFind.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="UserToList.cs">
+      <DependentUpon>SimplyFind.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

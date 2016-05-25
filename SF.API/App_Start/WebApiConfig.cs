@@ -20,7 +20,7 @@ namespace SF.API
                 defaults: new { id = RouteParameter.Optional }
             );
             config.Routes.MapHttpRoute(
-                name: "product-lists",
+                name: "get-product-lists",
                 routeTemplate: "productlists/{userId}",
                 defaults: new { controller = "Product", action = "GetProductLists"}
             );

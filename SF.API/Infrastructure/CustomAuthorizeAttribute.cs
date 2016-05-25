@@ -29,13 +29,13 @@ namespace SF.API
 
         private bool AuthorizeRequest(HttpActionContext actionContext)
         {
-            var userIdParam = (string)actionContext.ControllerContext.RouteData.Values["userId"];
+            var isAdmin = actionContext.RequestContext.Principal.IsInRole("Admin");
 
+            var userIdParam = (string)actionContext.ControllerContext.RouteData.Values["userId"];
             var hasAccess = ((System.Security.Claims.ClaimsIdentity) actionContext.RequestContext.Principal.Identity).HasClaim(
-                c => c.Type == "userId" && c.Value == userIdParam);
+                c => (c.Type == "userId" && c.Value == userIdParam) || isAdmin);
 
             return hasAccess;
-            
         }
     }
 }
