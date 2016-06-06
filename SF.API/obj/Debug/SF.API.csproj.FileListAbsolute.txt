@@ -54,3 +54,4 @@ D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.Owin.Cors.xml
 D:\Projects\SimplyFindWebAPI\SF.API\obj\Debug\SF.API.csprojResolveAssemblyReference.cache
 D:\Projects\SimplyFindWebAPI\SF.API\bin\DataAccess.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\DataAccess.pdb
+D:\myApp\SimplyFindWebAPI\SF.API\obj\Debug\SF.API.csprojResolveAssemblyReference.cache

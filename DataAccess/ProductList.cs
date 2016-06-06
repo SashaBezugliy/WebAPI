@@ -16,13 +16,13 @@ namespace DataAccess
     {
         public ProductList()
         {
-            this.UserToList = new HashSet<UserToList>();
+            this.ProductListToProduct = new HashSet<ProductListToProduct>();
         }
     
-        public int ListId { get; set; }
-        public string ListName { get; set; }
-        public string ProductIds { get; set; }
+        public int ProductListId { get; set; }
+        public string Name { get; set; }
+        public int UserId { get; set; }
     
-        public virtual ICollection<UserToList> UserToList { get; set; }
+        public virtual ICollection<ProductListToProduct> ProductListToProduct { get; set; }
     }
 }

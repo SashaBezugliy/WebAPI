@@ -2,11 +2,19 @@
 <Schema Namespace="SimplyFindModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="ProductList">
     <Key>
-      <PropertyRef Name="ListId" />
+      <PropertyRef Name="ProductListId" />
     </Key>
-    <Property Name="ListId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ListName" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="ProductIds" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="ProductListId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductListToProduct">
+    <Key>
+      <PropertyRef Name="ProductListToProductId" />
+    </Key>
+    <Property Name="ProductListToProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductListId" Type="int" Nullable="false" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ProductLocation">
     <Key>
@@ -18,17 +26,41 @@
     <Property Name="Longitude" Type="decimal" Precision="16" Scale="14" Nullable="false" />
     <Property Name="SupermarketId" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="UserToList">
-    <Key>
-      <PropertyRef Name="UserToListId" />
-    </Key>
-    <Property Name="UserToListId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="UserId" Type="nvarchar" MaxLength="2000" />
-    <Property Name="ListId" Type="int" Nullable="false" />
-  </EntityType>
+  <Association Name="FK__ProductLi__Produ__2645B050">
+    <End Role="ProductList" Type="Self.ProductList" Multiplicity="1" />
+    <End Role="ProductListToProduct" Type="Self.ProductListToProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductList">
+        <PropertyRef Name="ProductListId" />
+      </Principal>
+      <Dependent Role="ProductListToProduct">
+        <PropertyRef Name="ProductListId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductLi__Produ__2739D489">
+    <End Role="ProductLocation" Type="Self.ProductLocation" Multiplicity="1" />
+    <End Role="ProductListToProduct" Type="Self.ProductListToProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductLocation">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ProductListToProduct">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="SimplyFindModelStoreContainer">
     <EntitySet Name="ProductList" EntityType="Self.ProductList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductListToProduct" EntityType="Self.ProductListToProduct" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ProductLocation" EntityType="Self.ProductLocation" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="UserToList" EntityType="Self.UserToList" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ProductLi__Produ__2645B050" Association="Self.FK__ProductLi__Produ__2645B050">
+      <End Role="ProductList" EntitySet="ProductList" />
+      <End Role="ProductListToProduct" EntitySet="ProductListToProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductLi__Produ__2739D489" Association="Self.FK__ProductLi__Produ__2739D489">
+      <End Role="ProductLocation" EntitySet="ProductLocation" />
+      <End Role="ProductListToProduct" EntitySet="ProductListToProduct" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

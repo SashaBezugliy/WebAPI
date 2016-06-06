@@ -14,10 +14,17 @@ namespace DataAccess
     
     public partial class ProductLocation
     {
+        public ProductLocation()
+        {
+            this.ProductListToProduct = new HashSet<ProductListToProduct>();
+        }
+    
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public decimal Latitude { get; set; }
         public decimal Longitude { get; set; }
         public int SupermarketId { get; set; }
+    
+        public virtual ICollection<ProductListToProduct> ProductListToProduct { get; set; }
     }
 }

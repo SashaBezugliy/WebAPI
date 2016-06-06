@@ -1,15 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="SimplyFindModelStoreContainer" CdmEntityContainer="SimplyFindEntities">
-    <EntitySetMapping Name="ProductList">
-      <EntityTypeMapping TypeName="SimplyFindModel.ProductList">
-        <MappingFragment StoreEntitySet="ProductList">
-          <ScalarProperty Name="ProductIds" ColumnName="ProductIds" />
-          <ScalarProperty Name="ListName" ColumnName="ListName" />
-          <ScalarProperty Name="ListId" ColumnName="ListId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="ProductLocation">
       <EntityTypeMapping TypeName="SimplyFindModel.ProductLocation">
         <MappingFragment StoreEntitySet="ProductLocation">
@@ -21,12 +12,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="UserToList">
-      <EntityTypeMapping TypeName="SimplyFindModel.UserToList">
-        <MappingFragment StoreEntitySet="UserToList">
+    <EntitySetMapping Name="ProductListSet">
+      <EntityTypeMapping TypeName="SimplyFindModel.ProductList">
+        <MappingFragment StoreEntitySet="ProductList">
           <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="UserToListId" ColumnName="UserToListId" />
-          <ScalarProperty Name="ListId" ColumnName="ListId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProductListId" ColumnName="ProductListId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductListToProduct">
+      <EntityTypeMapping TypeName="SimplyFindModel.ProductListToProduct">
+        <MappingFragment StoreEntitySet="ProductListToProduct">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ProductListId" ColumnName="ProductListId" />
+          <ScalarProperty Name="ProductListToProductId" ColumnName="ProductListToProductId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
