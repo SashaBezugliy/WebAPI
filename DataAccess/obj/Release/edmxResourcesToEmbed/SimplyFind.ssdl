@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SimplyFindModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ProductList">
+    <Key>
+      <PropertyRef Name="ListId" />
+    </Key>
+    <Property Name="ListId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ListName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ProductIds" Type="nvarchar" MaxLength="2000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductLocation">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Latitude" Type="decimal" Precision="16" Scale="14" Nullable="false" />
+    <Property Name="Longitude" Type="decimal" Precision="16" Scale="14" Nullable="false" />
+    <Property Name="SupermarketId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserToList">
+    <Key>
+      <PropertyRef Name="UserToListId" />
+    </Key>
+    <Property Name="UserToListId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="2000" />
+    <Property Name="ListId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SimplyFindModelStoreContainer">
+    <EntitySet Name="ProductList" EntityType="Self.ProductList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductLocation" EntityType="Self.ProductLocation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserToList" EntityType="Self.UserToList" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
