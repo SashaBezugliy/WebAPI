@@ -12,12 +12,13 @@ namespace DataAccess
     using System;
     using System.Collections.Generic;
     
-    public partial class UserToList
+    public partial class ProductListToProduct
     {
-        public string UserId { get; set; }
-        public int ListId { get; set; }
-        public int UserToListId { get; set; }
+        public int ProductListToProductId { get; set; }
+        public int ProductListId { get; set; }
+        public int ProductId { get; set; }
     
         public virtual ProductList ProductList { get; set; }
+        public virtual ProductLocation ProductLocation { get; set; }
     }
 }

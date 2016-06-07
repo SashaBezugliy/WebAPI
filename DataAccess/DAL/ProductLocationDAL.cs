@@ -21,17 +21,17 @@ namespace DataAccess.DAL
             using (var sf = new SimplyFindEntities())
             {
 
-                var lists = sf.ProductList.Where(pl => pl.UserToList.Any(utl => utl.UserId == userId)).ToList();
+                //var lists = sf.ProductList.Where(pl => pl.UserToList.Any(utl => utl.UserId == userId)).ToList();
                 var productLists = new Dictionary<string, List<ProductLocation>>();
 
-                foreach (var list in lists)
-                {
-                    var productIds = new List<long>();
-                    list.ProductIds.Split(',').ToList().ForEach(i => productIds.Add(Convert.ToInt64(i)));
+                //foreach (var list in lists)
+                //{
+                //    var productIds = new List<long>();
+                //    list.ProductIds.Split(',').ToList().ForEach(i => productIds.Add(Convert.ToInt64(i)));
 
-                    var productLocations = sf.ProductLocation.Where(pl => productIds.Contains(pl.ProductId)).ToList();
-                    productLists[list.ListName] = productLocations;
-                }
+                //    var productLocations = sf.ProductLocation.Where(pl => productIds.Contains(pl.ProductId)).ToList();
+                //    productLists[list.ListName] = productLocations;
+                //}
 
                 return productLists;
             }
@@ -42,9 +42,9 @@ namespace DataAccess.DAL
         {
             using (var sf = new SimplyFindEntities())
             {
-                var productList = new ProductList {ListId = 1, ListName = listName, ProductIds = string.Join(",", productIds.ToArray()) };
-                sf.UserToList.Add(new UserToList {UserId = userId, ProductList = productList});
-                sf.ProductList.Add(productList);
+                //var productList = new ProductList {ListId = 1, ListName = listName, ProductIds = string.Join(",", productIds.ToArray()) };
+                //sf.UserToList.Add(new UserToList {UserId = userId, ProductList = productList});
+                //sf.ProductList.Add(productList);
 
                 try
                 {
