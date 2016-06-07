@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="SimplyFindUsers-Web.config Connection String" description="SimplyFindUsers Connection String used in web.config by the application to access the database." defaultValue="workstation id=SimplyFindUsers.mssql.somee.com;packet size=4096;user id=SimplyFindUsers_SQLLogin_1;pwd=5bfcfepqld;data source=SimplyFindUsers.mssql.somee.com;persist security info=False;initial catalog=SimplyFindUsers" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Projects\\SimplyFindWebAPI\\SF\.API\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SimplyFindUsers']/@connectionString" />
+  </parameter>
+  <parameter name="SimplyFindEntities-Web.config Connection String" description="SimplyFindEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/SimplyFind.csdl|res://*/SimplyFind.ssdl|res://*/SimplyFind.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=SimplyFind.mssql.somee.com;initial catalog=SimplyFind;persist security info=True;user id=SimplyFind_SQLLogin_1;password=qf3hwyl34m;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Projects\\SimplyFindWebAPI\\SF\.API\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SimplyFindEntities']/@connectionString" />
+  </parameter>
+</parameters>
