@@ -6,7 +6,7 @@
     </Key>
     <Property Name="ProductListId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="varchar" MaxLength="100" />
-    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="200" Nullable="false" />
   </EntityType>
   <EntityType Name="ProductListToProduct">
     <Key>

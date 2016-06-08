@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\ProductListDTO.cs" />
     <Compile Include="DAL\ProductLocationDAL.cs" />
     <Compile Include="ProductList.cs">
       <DependentUpon>SimplyFind.tt</DependentUpon>

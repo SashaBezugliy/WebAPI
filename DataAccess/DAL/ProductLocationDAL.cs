@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,45 +11,69 @@ namespace DataAccess.DAL
     {
         public List<ProductLocation> GetProductLocations(int supermarketId)
         {
+            List<ProductLocation> result;
             using (var sf = new SimplyFindEntities())
             {
-                return sf.ProductLocation.Where(pl => pl.SupermarketId == supermarketId).ToList();
+                result = sf.ProductLocation.Where(pl => pl.SupermarketId == supermarketId).ToList();
+            }
+            return result;
+        }
+
+        public List<ProductListDTO> GetProductLists(string userId)
+        {
+            var result = new List<ProductListDTO>();
+            using (var sf = new SimplyFindEntities())
+            {
+                var records = (from ep in sf.ProductListSet
+                    join e in sf.ProductListToProduct on ep.ProductListId equals e.ProductListId
+                    join t in sf.ProductLocation on e.ProductId equals t.ProductId
+                    where ep.UserId == userId
+                    select new
+                    {
+                        ep.ProductListId,
+                        ListName = ep.Name,
+                        t.ProductId,
+                        t.ProductName,
+                        t.Latitude,
+                        t.Longitude
+                    }).ToList();
+
+                var grouped = records.GroupBy(g => g.ProductListId);
+
+                foreach (var group in grouped)
+                {
+                    result.Add(new ProductListDTO
+                    {
+                        ListId = group.Key,
+                        ListName = group.Select(g => g.ListName).First(),
+                        Products = group.Select(v => new {v.ProductId, v.ProductName, v.Latitude, v.Longitude})
+                            .ToList<object>()
+                    });
+                }
+                return result;
             }
         }
 
-        public Dictionary<string, List<ProductLocation>> GetProductLists(string userId)
+
+        public int SaveProductList(string userId, string listName, List<long> productIds)
         {
             using (var sf = new SimplyFindEntities())
             {
+                var productList = new ProductList {Name = listName, UserId = userId };
 
-                //var lists = sf.ProductList.Where(pl => pl.UserToList.Any(utl => utl.UserId == userId)).ToList();
-                var productLists = new Dictionary<string, List<ProductLocation>>();
-
-                //foreach (var list in lists)
-                //{
-                //    var productIds = new List<long>();
-                //    list.ProductIds.Split(',').ToList().ForEach(i => productIds.Add(Convert.ToInt64(i)));
-
-                //    var productLocations = sf.ProductLocation.Where(pl => productIds.Contains(pl.ProductId)).ToList();
-                //    productLists[list.ListName] = productLocations;
-                //}
-
-                return productLists;
-            }
-        }
-
-
-        public void SaveProductList(string userId, string listName, List<long> productIds)
-        {
-            using (var sf = new SimplyFindEntities())
-            {
-                //var productList = new ProductList {ListId = 1, ListName = listName, ProductIds = string.Join(",", productIds.ToArray()) };
-                //sf.UserToList.Add(new UserToList {UserId = userId, ProductList = productList});
-                //sf.ProductList.Add(productList);
+                foreach (var productId in productIds)
+                {
+                    sf.ProductListToProduct.Add(new ProductListToProduct
+                    {
+                        ProductId = (int) productId,
+                        ProductList = productList
+                    });
+                }
 
                 try
                 {
                     sf.SaveChanges();
+                    return productList.ProductListId;
                 }
                 catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
                 {

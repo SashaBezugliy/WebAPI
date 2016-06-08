@@ -1,9 +1,3 @@
-D:\Projects\SimplyFindWebAPI\DataAccess\bin\Debug\DataAccess.dll
-D:\Projects\SimplyFindWebAPI\DataAccess\bin\Debug\DataAccess.pdb
-D:\Projects\SimplyFindWebAPI\DataAccess\bin\Debug\EntityFramework.dll
-D:\Projects\SimplyFindWebAPI\DataAccess\bin\Debug\EntityFramework.xml
-D:\Projects\SimplyFindWebAPI\DataAccess\obj\Debug\DataAccess.dll
-D:\Projects\SimplyFindWebAPI\DataAccess\obj\Debug\DataAccess.pdb
 D:\myApp\SimplyFindWebAPI\DataAccess\bin\Debug\DataAccess.dll
 D:\myApp\SimplyFindWebAPI\DataAccess\bin\Debug\DataAccess.pdb
 D:\myApp\SimplyFindWebAPI\DataAccess\bin\Debug\EntityFramework.dll
@@ -12,6 +6,12 @@ D:\myApp\SimplyFindWebAPI\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyR
 D:\myApp\SimplyFindWebAPI\DataAccess\obj\Debug\DataAccess.dll
 D:\myApp\SimplyFindWebAPI\DataAccess\obj\Debug\DataAccess.pdb
 D:\Projects\SimplyFindWebAPI\DataAccess\bin\Debug\DataAccess.dll.config
+D:\Projects\SimplyFindWebAPI\DataAccess\bin\Debug\DataAccess.dll
+D:\Projects\SimplyFindWebAPI\DataAccess\bin\Debug\DataAccess.pdb
+D:\Projects\SimplyFindWebAPI\DataAccess\bin\Debug\EntityFramework.dll
 D:\Projects\SimplyFindWebAPI\DataAccess\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\SimplyFindWebAPI\DataAccess\bin\Debug\EntityFramework.xml
 D:\Projects\SimplyFindWebAPI\DataAccess\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\SimplyFindWebAPI\DataAccess\obj\Debug\DataAccess.dll
+D:\Projects\SimplyFindWebAPI\DataAccess\obj\Debug\DataAccess.pdb
 D:\Projects\SimplyFindWebAPI\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache

@@ -1,3 +1,4 @@
+D:\myApp\SimplyFindWebAPI\SF.API\obj\Debug\SF.API.csprojResolveAssemblyReference.cache
 D:\Projects\SimplyFindWebAPI\SF.API\bin\roslyn\csc.exe
 D:\Projects\SimplyFindWebAPI\SF.API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -13,12 +14,14 @@ D:\Projects\SimplyFindWebAPI\SF.API\bin\roslyn\VBCSCompiler.exe.config
 D:\Projects\SimplyFindWebAPI\SF.API\bin\SF.API.dll.config
 D:\Projects\SimplyFindWebAPI\SF.API\bin\SF.API.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\SF.API.pdb
+D:\Projects\SimplyFindWebAPI\SF.API\bin\DataAccess.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\EntityFramework.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\EntityFramework.SqlServer.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.AspNet.Identity.Core.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.AspNet.Identity.Owin.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.Owin.Cors.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.Owin.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.Owin.Host.SystemWeb.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.Owin.Security.Cookies.dll
@@ -27,9 +30,11 @@ D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.Owin.Security.OAuth.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\Newtonsoft.Json.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\Owin.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\System.Net.Http.Formatting.dll
+D:\Projects\SimplyFindWebAPI\SF.API\bin\System.Web.Cors.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\System.Web.Http.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\System.Web.Http.Owin.dll
 D:\Projects\SimplyFindWebAPI\SF.API\bin\System.Web.Http.WebHost.dll
+D:\Projects\SimplyFindWebAPI\SF.API\bin\DataAccess.pdb
 D:\Projects\SimplyFindWebAPI\SF.API\bin\EntityFramework.xml
 D:\Projects\SimplyFindWebAPI\SF.API\bin\EntityFramework.SqlServer.xml
 D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.AspNet.Identity.Core.xml
@@ -37,6 +42,7 @@ D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.AspNet.Identity.EntityFramewor
 D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.AspNet.Identity.Owin.xml
 D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.Owin.xml
+D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.Owin.Cors.xml
 D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.Owin.Host.SystemWeb.xml
 D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.Owin.Security.xml
 D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.Owin.Security.Cookies.xml
@@ -46,12 +52,6 @@ D:\Projects\SimplyFindWebAPI\SF.API\bin\Newtonsoft.Json.xml
 D:\Projects\SimplyFindWebAPI\SF.API\bin\System.Net.Http.Formatting.xml
 D:\Projects\SimplyFindWebAPI\SF.API\bin\System.Web.Http.xml
 D:\Projects\SimplyFindWebAPI\SF.API\bin\System.Web.Http.WebHost.xml
+D:\Projects\SimplyFindWebAPI\SF.API\obj\Debug\SF.API.csprojResolveAssemblyReference.cache
 D:\Projects\SimplyFindWebAPI\SF.API\obj\Debug\SF.API.dll
 D:\Projects\SimplyFindWebAPI\SF.API\obj\Debug\SF.API.pdb
-D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.Owin.Cors.dll
-D:\Projects\SimplyFindWebAPI\SF.API\bin\System.Web.Cors.dll
-D:\Projects\SimplyFindWebAPI\SF.API\bin\Microsoft.Owin.Cors.xml
-D:\Projects\SimplyFindWebAPI\SF.API\obj\Debug\SF.API.csprojResolveAssemblyReference.cache
-D:\Projects\SimplyFindWebAPI\SF.API\bin\DataAccess.dll
-D:\Projects\SimplyFindWebAPI\SF.API\bin\DataAccess.pdb
-D:\myApp\SimplyFindWebAPI\SF.API\obj\Debug\SF.API.csprojResolveAssemblyReference.cache
